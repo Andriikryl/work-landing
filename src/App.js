@@ -1,8 +1,11 @@
+import { Header } from "./components/header";
+import { Wrapper } from "./components/wrapper";
+
 function App() {
   return (
-    <div className="App">
-      <h1 className="flex">sfsaf</h1>
-    </div>
+    <Wrapper>
+      <Header />
+    </Wrapper>
   );
 }
 
