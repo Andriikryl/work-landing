@@ -1,5 +1,6 @@
 import React from 'react'
 import { ReactComponent as LogoIcon } from '../../images/logo.svg'
+import { Button } from '../button'
 import { NavItem } from '../nav-item'
 import { NavMenu } from '../nav-menu'
 import { COMPANY, FEATURES } from './constatnt'
@@ -18,6 +19,10 @@ export const Header = () => {
             <NavItem text='Careers'/>
             <NavItem text='about'/>
         </nav>
+        <div className='flex ml-auto space-x-5'>
+      <Button>Loggin</Button>
+      <Button hasBorder={true}>Register</Button>
+        </div>
     </header>
   )
 }
