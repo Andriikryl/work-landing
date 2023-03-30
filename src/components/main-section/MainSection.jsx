@@ -9,17 +9,20 @@ import { Button } from '../button';
 
 export const MainSection = () => {
   return (
-    <section className='flex w-full mt-6'>
+    <section className='flex w-full mt-6 mb-[300px] justify-between'>
       <div className='relative w-2/4 text-left mt-12'>
         <h1 className='text-8xl font-black mt-60 whitespace-pre-line'>{`Make\n remote work`}</h1>
         <p className='text-medium-gray text-lg my-12 whitespace-pre-line'>{`Lorem ipsum dolor, sit amet consectetur adipisicing elit.\n Amet ullam dolorum animi atque vitae exercitationem\n quibusdam maiores adipisci qui harum.`}</p>
-      <Button isFilled={true} >Learn more</Button>
-      <div className='flex'>
+      <Button  isFilled={true}  >Learn more</Button>
+      <div className='flex justify-around bottom-2 pt-[50px]'>
         <Databiz/>
         <Audiophile/>
         <Meet/>
         <Maker/>
       </div>
+      </div>
+      <div className='flex w-2/4 mt-20'>
+        <img src={MenImage}></img>
       </div>
     </section>
   )
