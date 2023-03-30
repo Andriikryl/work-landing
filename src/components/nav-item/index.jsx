@@ -1,13 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {ReactComponent as ArrowDown} from '../../images/icon-arrow-down.svg'
+import {ReactComponent as ArrowUp} from '../../images/icon-arrow-up.svg'
 
-export const NavItem = ({text = ''}) => {
+export const NavItem = ({text = '', children}) => {
+  const [selected, setSelected] = useState("");
+  
   return (
     <div className='relative'>
         <div className='flex space-x-2 cursor-pointer items-center'>
-        <span className='text-medium-gray hover:text-almost-black'>{text}</span>
-            <ArrowDown/>
+        <span className='text-medium-gray hover:text-almost-black' onClick={() => children && setSelected(text !== selected ? text : '')} >{text}</span>
+        {children && selected !== text && <ArrowDown/>}
+        {children && selected === text && <ArrowUp/>}
         </div>
+        {selected && children}
     </div>
   )
 }
